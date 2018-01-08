@@ -10,7 +10,11 @@ export ZSH=/home/atif/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs anaconda)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MODE='awesome-fontconfig'
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -114,7 +118,6 @@ alias editzshrc="vim ~/dotfiles/.zshrc"
 alias editvimrc="vim ~/dotfiles/.vimrc"
 alias edittmux="vim ~/dotfiles/tmux.config"
 
-source virtualenvwrapper.sh
 export PROJECT_HOME=/home/atif/projects
 export GOPATH=$HOME/Go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
