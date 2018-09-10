@@ -126,3 +126,8 @@ if has("gui_running")
         colorscheme iceberg
     endif
 endif
+
+autocmd BufNewFile,BufRead *.tex set spell
+autocmd BufNewFile,BufRead *.md set spell
+autocmd BufNewFile,BufRead *.tex set tw=79
+autocmd BufNewFile,BufRead *.md set tw=79
